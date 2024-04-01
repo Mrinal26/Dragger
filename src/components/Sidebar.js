@@ -1,6 +1,9 @@
 import React from 'react';
 import { Paper, Typography, List, ListItem, ListItemIcon, ListItemText, Button } from '@mui/material';
-import { DragIndicator, TextFields, Input, Save } from '@mui/icons-material';
+import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
+import TextFieldsIcon from '@mui/icons-material/TextFields';
+import InputIcon from '@mui/icons-material/Input';
+import SaveIcon from '@mui/icons-material/Save';
 
 const Sidebar = ({ handleExport }) => {
   return (
@@ -11,24 +14,24 @@ const Sidebar = ({ handleExport }) => {
       <List>
         <ListItem>
           <ListItemIcon>
-            <DragIndicator />
+            <DragIndicatorIcon />
           </ListItemIcon>
           <ListItemText primary="Label" />
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <TextFields />
+            <TextFieldsIcon />
           </ListItemIcon>
           <ListItemText primary="Input" />
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Input />
+            <InputIcon />
           </ListItemIcon>
           <ListItemText primary="Button" />
         </ListItem>
       </List>
-      <Button startIcon={<Save />} variant="contained" color="primary" onClick={handleExport}>
+      <Button startIcon={<SaveIcon />} variant="contained" color="primary" onClick={handleExport}>
         Export
       </Button>
     </Paper>

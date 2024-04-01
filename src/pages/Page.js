@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Paper } from '@mui/material';
 import { useDrop } from 'react-dnd';
-import DraggableElement from '../components/DraggableElement'
+import DraggableElement from '../components/DraggableElement';
 import Modal from '../components/Modal';
 
 const Page = () => {
@@ -11,6 +11,7 @@ const Page = () => {
   const [modalConfig, setModalConfig] = useState({});
 
   useEffect(() => {
+    // Retrieve elements from local storage on component mount
     const storedElements = JSON.parse(localStorage.getItem('elements'));
     if (storedElements) {
       setElements(storedElements);
@@ -18,6 +19,7 @@ const Page = () => {
   }, []);
 
   useEffect(() => {
+    // Save elements to local storage whenever it changes
     localStorage.setItem('elements', JSON.stringify(elements));
   }, [elements]);
 
@@ -38,18 +40,20 @@ const Page = () => {
   };
 
   const handleConfigure = (elementId) => {
+    // Open modal for configuration editing
     const selectedElement = elements.find(element => element.id === elementId);
     setModalConfig(selectedElement);
     setIsModalOpen(true);
   };
 
-  const [{ isOver }, drop] = useDrop({
+  const drop = useDrop({
     accept: 'element',
     drop: (item) => handleDrop(item.element),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
-  });
+  })[1]; 
+
 
   const closeModal = () => {
     setIsModalOpen(false);

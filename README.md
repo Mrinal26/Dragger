@@ -68,3 +68,53 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Mini Page Builder
+
+Mini Page Builder is a simple web application that allows users to create custom pages by dragging and dropping components onto a canvas.
+
+## Features
+
+- Drag and drop components from the sidebar onto the canvas.
+- Configure each component's properties such as position and appearance.
+- Save changes automatically using local storage.
+- Export page configurations to a JSON file for sharing or backup.
+
+## Technologies Used
+
+- React.js
+- Material-UI
+- react-dnd (React Drag and Drop)
+- HTML5 Backend for drag and drop functionality
+
+## Installation
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/mini-page-builder.git
+
+2. Navigate to the project directory:
+
+cd mini-page-builder
+
+3. Install dependencies:
+
+npm install
+
+4. Start the development server:
+
+npm start
+
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Usage
+
+- Drag components from the sidebar onto the canvas.
+- Double-click on a component to configure its properties.
+- Move components around the canvas by dragging them.
+- Press Enter to edit the properties of a selected component.
+- Press Delete to delete a selected component.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and create a pull request with your changes.
